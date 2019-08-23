@@ -1,10 +1,4 @@
 # bash/zsh git prompt support
-#
-# Copyright (C) 2006,2007 Shawn O. Pearce <spearce@spearce.org>
-# Distributed under the GNU General Public License, version 2.0.
-#
-# This script allows you to see repository status in your prompt.
-#
 # To enable:
 #
 #    1) Copy this file to somewhere (e.g. ~/.git-prompt.sh).
@@ -30,60 +24,6 @@
 #        Optionally, you can supply a third argument with a printf
 #        format string to finetune the output of the branch status
 #
-# The repository status will be displayed only if you are currently in a
-# git repository. The %s token is the placeholder for the shown status.
-#
-# The prompt status always includes the current branch name.
-#
-# In addition, if you set GIT_PS1_SHOWDIRTYSTATE to a nonempty value,
-# unstaged (*) and staged (+) changes will be shown next to the branch
-# name.  You can configure this per-repository with the
-# bash.showDirtyState variable, which defaults to true once
-# GIT_PS1_SHOWDIRTYSTATE is enabled.
-#
-# You can also see if currently something is stashed, by setting
-# GIT_PS1_SHOWSTASHSTATE to a nonempty value. If something is stashed,
-# then a '$' will be shown next to the branch name.
-#
-# If you would like to see if there're untracked files, then you can set
-# GIT_PS1_SHOWUNTRACKEDFILES to a nonempty value. If there're untracked
-# files, then a '%' will be shown next to the branch name.  You can
-# configure this per-repository with the bash.showUntrackedFiles
-# variable, which defaults to true once GIT_PS1_SHOWUNTRACKEDFILES is
-# enabled.
-#
-# If you would like to see the difference between HEAD and its upstream,
-# set GIT_PS1_SHOWUPSTREAM="auto".  A "<" indicates you are behind, ">"
-# indicates you are ahead, "<>" indicates you have diverged and "="
-# indicates that there is no difference. You can further control
-# behaviour by setting GIT_PS1_SHOWUPSTREAM to a space-separated list
-# of values:
-#
-#     verbose       show number of commits ahead/behind (+/-) upstream
-#     name          if verbose, then also show the upstream abbrev name
-#     legacy        don't use the '--count' option available in recent
-#                   versions of git-rev-list
-#     git           always compare HEAD to @{upstream}
-#     svn           always compare HEAD to your SVN upstream
-#
-# By default, __git_ps1 will compare HEAD to your SVN upstream if it can
-# find one, or @{upstream} otherwise.  Once you have set
-# GIT_PS1_SHOWUPSTREAM, you can override it on a per-repository basis by
-# setting the bash.showUpstream config variable.
-#
-# If you would like to see more information about the identity of
-# commits checked out as a detached HEAD, set GIT_PS1_DESCRIBE_STYLE
-# to one of these values:
-#
-#     contains      relative to newer annotated tag (v1.6.3.2~35)
-#     branch        relative to newer tag or branch (master~4)
-#     describe      relative to older annotated tag (v1.6.3.1-13-gdd42c2f)
-#     default       exactly matching tag
-#
-# If you would like a colored hint about the current dirty state, set
-# GIT_PS1_SHOWCOLORHINTS to a nonempty value. The colors are based on
-# the colored output of "git status -sb" and are available only when
-# using __git_ps1 for PROMPT_COMMAND or precmd.
 
 # check whether printf supports -v
 __git_printf_supports_v=
