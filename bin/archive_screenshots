@@ -1,9 +1,0 @@
-#!/bin/bash
-
-DEST="$HOME/Documents/Screenshots"
-
-if [ ! -d "$DEST" ];
-then
-  mkdir -p $DEST
-fi
-mv $HOME/Desktop/Screen\ Shot*.png $DEST
